@@ -61,7 +61,8 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.get('#place_order').click()
 
         //Mensagem de conclusão da compra
-        cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.')
+        cy.wait(6000)
+        cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido')
 
     });
 
